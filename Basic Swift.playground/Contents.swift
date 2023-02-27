@@ -124,7 +124,7 @@ var myString: String? = nil
 if myString != nil {
     print(myString!)
 } else {
-   print("myString has nil value")
+    print("myString has nil value")
 }
 
 // Forced Unwrapping
@@ -133,9 +133,9 @@ var myString1: String?
 myString1 = "Hello, Swift 4!"
 
 if myString1 != nil {
-   print(myString1) // Force-unwrap the value to avoid this warning
+    print(myString1) // Force-unwrap the value to avoid this warning
 } else {
-   print("myString has nil value")
+    print("myString has nil value")
 }
 
 //Automatic Unwrapping
@@ -143,9 +143,9 @@ var myString2: String!
 myString2 = "Hello, Swift 4!"
 
 if myString2 != nil {
-print(myString2) //Coercion of implicitly unwrappable value of type 'String?' to 'Any' does not unwrap optional
+    print(myString2) //Coercion of implicitly unwrappable value of type 'String?' to 'Any' does not unwrap optional
 } else {
-   print("myString has nil value")
+    print("myString has nil value")
 }
 
 //Optional Binding
@@ -153,9 +153,9 @@ var myString3:String?
 myString3 = "Hello, Swift 4!"
 
 if let yourString = myString3 {
-   print("Your string has - \(yourString)")
+    print("Your string has - \(yourString)")
 } else {
-   print("Your string does not have a value")
+    print("Your string does not have a value")
 }
 
 let someValue:Int? = 5
@@ -168,13 +168,13 @@ print(someValue1)
 //Optional handling with if else statement
 var someValue2:Int?
 var someAnotherValue1:Int! = 0
-        
+
 if someValue2 != nil {
     print("It has some value \(someValue2!)")
 } else {
     print("doesn't contain value")
 }
-        
+
 if someAnotherValue1 != nil {
     print("It has some value \(someAnotherValue1!)")
 } else {
@@ -184,13 +184,13 @@ if someAnotherValue1 != nil {
 //Optional handling using if let statement
 var someValue3:Int?
 var someAnotherValue2:Int! = 0
-       
+
 if let temp = someValue3 {
     print("It has some value \(temp)")
 } else {
     print("doesn't contain value")
 }
-        
+
 if let temp = someAnotherValue2 {
     print("It has some value \(temp)")
 } else {

@@ -2,9 +2,9 @@ import UIKit
 
 // define enum
 enum Season: CaseIterable {
-  
-  // define enum values
-  case spring, summer, autumn, winter
+    
+    // define enum values
+    case spring, summer, autumn, winter
 }
 
 // create enum variable
@@ -19,35 +19,35 @@ print("Current Season:", currentSeason)
 // MARK: - Swift enum With Switch Statement
 
 enum PizzaSize {
-  case small, medium, large
+    case small, medium, large
 }
 
 var size = PizzaSize.medium
 
 switch(size) {
-  case .small:
+case .small:
     print("I ordered a small size pizza.")
-
-  case .medium:
+    
+case .medium:
     print("I ordered a medium size pizza.")
-
-   case .large:
-     print("I ordered a large size pizza.");
+    
+case .large:
+    print("I ordered a large size pizza.");
 }
 
 // MARK: - Iterate Over enum Cases
 
 // for loop to iterate over all cases
 for currentSeason in Season.allCases {
-  print(currentSeason)
+    print(currentSeason)
 }
 
 // MARK: - enums With Raw Values
 
 enum Size : Int {
-  case small = 10
-  case medium = 12
-  case large = 14
+    case small = 10
+    case medium = 12
+    case large = 14
 }
 
 // access raw value of python case
@@ -58,12 +58,12 @@ print(result)
 // MARK: - enum Associated Values
 
 enum Laptop {
-
-  // associate string value
-  case name(String)
-
-  // associate integer value
-  case price (Int)
+    
+    // associate string value
+    case name(String)
+    
+    // associate integer value
+    case price (Int)
 }
 
 // pass string value to name
@@ -78,10 +78,10 @@ print(offer)
 // MARK: - Swift enum with Associated Values
 
 enum Distance {
-  
-  // associate value
-  case km(String)
-  case miles(String)
+    
+    // associate value
+    case km(String)
+    case miles(String)
 }
 
 // pass string value to km
@@ -95,12 +95,12 @@ print(dist2)
 // MARK: - Associate Multiple Values
 
 enum Marks {
-
- // associate multiple Double values
-case gpa(Double, Double, Double)
-
-// associate multiple String values
-case grade(String, String, String)
+    
+    // associate multiple Double values
+    case gpa(Double, Double, Double)
+    
+    // associate multiple String values
+    case grade(String, String, String)
 }
 
 // pass three Double values to gpa
@@ -115,11 +115,11 @@ print(marks2)
 // MARK: - Named Associated Values
 
 enum Pizza {
-
-  // named associated value
-  case small (inches: Int)
-  case medium (inches: Int)
-  case large (inches: Int)
+    
+    // named associated value
+    case small (inches: Int)
+    case medium (inches: Int)
+    case large (inches: Int)
 }
 
 // pass value using provided names
@@ -129,21 +129,21 @@ print(pizza1)
 // MARK: - enum Associated Values and Switch Statement
 
 enum Mercedes {
-
- case sedan(height: Double)
- case suv(height: Double)
- case roadster(height: Double)
+    
+    case sedan(height: Double)
+    case suv(height: Double)
+    case roadster(height: Double)
 }
 
 var choice = Mercedes.suv(height: 5.4)
 
 switch(choice) {
- case let .sedan(height):
-   print("Height:", height)
-
- case let .suv(height):
-   print("Height:", height)
-
- case let .roadster(height):
-   print("Height:", height)
+case let .sedan(height):
+    print("Height:", height)
+    
+case let .suv(height):
+    print("Height:", height)
+    
+case let .roadster(height):
+    print("Height:", height)
 }

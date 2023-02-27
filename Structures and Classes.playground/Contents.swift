@@ -5,10 +5,10 @@ import UIKit
 
 // define a class
 class Bicycle {
-
-// define two properties
-var name = ""
-var gears = 0
+    
+    // define two properties
+    var name = ""
+    var gears = 0
 }
 
 // create instance of Person
@@ -23,9 +23,9 @@ print("Name: \(bicycle1.name), Gears: \( bicycle1.gears) ")
 
 // define a class
 class Employee {
-
-// define a property
-var employeeID = 0
+    
+    // define a property
+    var employeeID = 0
 }
 
 // MARK: - Create Multiple Objects of Class
@@ -46,40 +46,40 @@ print("Employee ID: \(employee2.employeeID)")
 
 // create a class
 class Room {
-
-  var length = 0.0
-  var breadth = 0.0
-
-  // method to calculate area
-  func calculateArea() {
-    print("Area of Room =", length * breadth)
-  }
+    
+    var length = 0.0
+    var breadth = 0.0
+    
+    // method to calculate area
+    func calculateArea() {
+        print("Area of Room =", length * breadth)
+    }
 }
 
-  // create object of Room class
-  var studyRoom = Room()
+// create object of Room class
+var studyRoom = Room()
 
-  // assign values to all the properties
-  studyRoom.length = 42.5
-  studyRoom.breadth = 30.8
+// assign values to all the properties
+studyRoom.length = 42.5
+studyRoom.breadth = 30.8
 
-  // access method inside class
-  studyRoom.calculateArea()
+// access method inside class
+studyRoom.calculateArea()
 
 
 // MARK: - Swift Initializer
 
 class Bike {
-
-  // properties with no default values
-  var name: String
-  var gear: Int
-
-  // assign value using initializer
-  init(name: String, gear: Int){
-    self.name = name
-    self.gear = gear
-  }
+    
+    // properties with no default values
+    var name: String
+    var gear: Int
+    
+    // assign value using initializer
+    init(name: String, gear: Int){
+        self.name = name
+        self.gear = gear
+    }
 }
 
 // object of Person with custom initializer
@@ -118,20 +118,20 @@ let vga = Resolution(width: 640, height: 480)
 
 // MARK: - Swift Method Overriding
 class Vehicle {
-
-  // method in the superclass
-  func displayInfo() {
-    print("Four Wheeler or Two Wheeler")
-  }
+    
+    // method in the superclass
+    func displayInfo() {
+        print("Four Wheeler or Two Wheeler")
+    }
 }
 
 // Car inherits Vehicle
 class Car: Vehicle {
-
-  // overriding the displayInfo() method
-  override func displayInfo() {
-    print("Four Wheeler")
-  }
+    
+    // overriding the displayInfo() method
+    override func displayInfo() {
+        print("Four Wheeler")
+    }
 }
 
 // create an object of the subclass
