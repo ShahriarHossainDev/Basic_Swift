@@ -115,19 +115,27 @@ print("The width of someVideoMode is now \(someVideoMode.resolution.width)")
 
 let vga = Resolution(width: 640, height: 480)
 
-// MARK: - Enum
 
-enum CompassPoint {
-    case north, south, east, west
-    mutating func turnNorth() {
-        self = .north
-    }
+// MARK: - Swift Method Overriding
+class Vehicle {
+
+  // method in the superclass
+  func displayInfo() {
+    print("Four Wheeler or Two Wheeler")
+  }
 }
-var currentDirection = CompassPoint.west
-let rememberedDirection = currentDirection
-currentDirection.turnNorth()
 
-print("The current direction is \(currentDirection)") // Prints "The current direction is north"
-print("The remembered direction is \(rememberedDirection)")
-// Prints "The remembered direction is west"
+// Car inherits Vehicle
+class Car: Vehicle {
 
+  // overriding the displayInfo() method
+  override func displayInfo() {
+    print("Four Wheeler")
+  }
+}
+
+// create an object of the subclass
+var car1 =  Car()
+
+// call the displayInfo() method
+car1.displayInfo()
