@@ -107,3 +107,42 @@ print("UTF-16 Codes: ")
 for code in unicodeString.utf16 {
     print("\(code) ")
 }
+
+let wiseWords = "\"Imagination is more important than knowledge\" - Einstein"
+// "Imagination is more important than knowledge" - Einstein
+let dollarSign = "\u{24}"        // $,  Unicode scalar U+0024
+let blackHeart = "\u{2665}"      // ♥,  Unicode scalar U+2665
+let sparklingHeart = "\u{1F496}" // 💖, Unicode scalar U+1F496
+
+// MARK: - Prefix and Suffix Equality
+
+let romeoAndJuliet = [
+    "Act 1 Scene 1: Verona, A public place",
+    "Act 1 Scene 2: Capulet's mansion",
+    "Act 1 Scene 3: A room in Capulet's mansion",
+    "Act 1 Scene 4: A street outside Capulet's mansion",
+    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+    "Act 2 Scene 1: Outside Capulet's mansion",
+    "Act 2 Scene 2: Capulet's orchard",
+    "Act 2 Scene 3: Outside Friar Lawrence's cell",
+    "Act 2 Scene 4: A street in Verona",
+    "Act 2 Scene 5: Capulet's mansion",
+    "Act 2 Scene 6: Friar Lawrence's cell"
+]
+
+
+var act1SceneCount = 0
+for scene in romeoAndJuliet {
+    if scene.hasPrefix("Act 1 ") {
+        act1SceneCount += 1
+    }
+}
+print("There are \(act1SceneCount) scenes in Act 1")
+
+
+var st = 4
+var sr = 5
+
+(st, sr) = (sr, st)
+
+print("\(st)    \(sr)")
